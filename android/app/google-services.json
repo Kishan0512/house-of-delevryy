@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "595259987273",
+    "project_id": "nawabepaan-49961",
+    "storage_bucket": "nawabepaan-49961.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595259987273:android:f89875da38595d2147b698",
+        "android_client_info": {
+          "package_name": "com.app.biteloop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "595259987273-kjsbpbvt91ou3475fqboqmhrqpoesp16.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkQ83qILZbgDUcDUb0jewONSjG3gIrpjs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "595259987273-kjsbpbvt91ou3475fqboqmhrqpoesp16.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
