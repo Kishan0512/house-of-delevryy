@@ -751,9 +751,11 @@ class _SubscriptionCheckoutScreenState extends State<SubscriptionCheckoutScreen>
                         showCustomSnackBar('no_payment_method_is_enabled'.tr);
                       }else if(_orderAmount < restController.restaurant.minimumOrder) {
                         showCustomSnackBar('${'minimum_order_amount_is'.tr} ${restController.restaurant.minimumOrder}');
-                      }else if((orderController.selectedDateSlot == 0 && _todayClosed) || (orderController.selectedDateSlot == 1 && _tomorrowClosed)) {
+                      }
+                      else if((orderController.selectedDateSlot == 0 && _todayClosed) || (orderController.selectedDateSlot == 1 && _tomorrowClosed)) {
                         showCustomSnackBar('restaurant_is_closed'.tr);
-                      }else if (orderController.timeSlots == null || orderController.timeSlots.length == 0) {
+                      }
+                      else if (orderController.timeSlots == null || orderController.timeSlots.length == 0) {
                         if(restController.restaurant.scheduleOrder) {
                           showCustomSnackBar('select_a_time'.tr);
                         }else {

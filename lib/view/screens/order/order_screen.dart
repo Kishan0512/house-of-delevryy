@@ -1,5 +1,6 @@
 import 'package:efood_multivendor/controller/auth_controller.dart';
 import 'package:efood_multivendor/controller/order_controller.dart';
+import 'package:efood_multivendor/data/model/response/order_model.dart';
 import 'package:efood_multivendor/helper/responsive_helper.dart';
 import 'package:efood_multivendor/util/dimensions.dart';
 import 'package:efood_multivendor/util/styles.dart';
@@ -24,7 +25,7 @@ class _OrderScreenState extends State<OrderScreen> with TickerProviderStateMixin
 
     _isLoggedIn = Get.find<AuthController>().isLoggedIn();
     if(_isLoggedIn) {
-      _tabController = TabController(length: 2, initialIndex: 0, vsync: this);
+      _tabController = TabController(length: 3, initialIndex: 0, vsync: this);
       Get.find<OrderController>().getRunningOrders(1, notify: false);
       Get.find<OrderController>().getHistoryOrders(1, notify: false);
     }
@@ -43,7 +44,7 @@ class _OrderScreenState extends State<OrderScreen> with TickerProviderStateMixin
                 width: Dimensions.WEB_MAX_WIDTH,
                 color: Theme.of(context).cardColor,
                 child: TabBar(
-                  controller: _tabController,
+                controller: _tabController,
                   indicatorColor: Theme.of(context).primaryColor,
                   indicatorWeight: 3,
                   labelColor: Theme.of(context).primaryColor,
@@ -53,6 +54,7 @@ class _OrderScreenState extends State<OrderScreen> with TickerProviderStateMixin
                   tabs: [
                     Tab(text: 'running'.tr),
                     Tab(text: 'history'.tr),
+                    Tab(text: 'Subscription'.tr),
                   ],
                 ),
               ),
@@ -63,6 +65,8 @@ class _OrderScreenState extends State<OrderScreen> with TickerProviderStateMixin
               children: [
                 OrderView(isRunning: true),
                 OrderView(isRunning: false),
+                order(),
+
               ],
             )),
 
